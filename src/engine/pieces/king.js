@@ -1,3 +1,5 @@
+import Player from '../player';
+import Square from '../square';
 import Piece from './piece';
 
 export default class King extends Piece {
@@ -6,6 +8,9 @@ export default class King extends Piece {
     }
 
     getAvailableMoves(board) {
-        return new Array(0);
+        let pieceLocation = board.findPiece(this)
+            return [Square.at(pieceLocation.row+1, pieceLocation.col), Square.at(pieceLocation.row-1, pieceLocation.col),]
+            [Square.at(pieceLocation.row, pieceLocation.col-1), Square.at(pieceLocation.row, pieceLocation.col+1)]
+        
     }
 }
