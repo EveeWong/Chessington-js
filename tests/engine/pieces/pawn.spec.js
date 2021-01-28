@@ -24,13 +24,8 @@ describe('Pawn', () => {
 
         it('can move one or two squares up on their first move', () => {
             const pawn = new Pawn(Player.WHITE);
-
-            let startSquare = Square.at(0, 0)
-
-            board.setPiece(startSquare, pawn);
             board.setPiece(Square.at(1, 7), pawn);
 
-            //Add a test for pawns moving two spaces initially)
 
             const moves = pawn.getAvailableMoves(board);
             
