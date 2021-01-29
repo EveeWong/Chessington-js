@@ -9,8 +9,11 @@ export default class King extends Piece {
 
     getAvailableMoves(board) {
         let pieceLocation = board.findPiece(this)
-            return [Square.at(pieceLocation.row+1, pieceLocation.col), Square.at(pieceLocation.row-1, pieceLocation.col),]
-            [Square.at(pieceLocation.row, pieceLocation.col-1), Square.at(pieceLocation.row, pieceLocation.col+1)]
+            return [Square.at(pieceLocation.row+1, pieceLocation.col), Square.at(pieceLocation.row-1, pieceLocation.col),
+            Square.at(pieceLocation.row, pieceLocation.col+1), Square.at(pieceLocation.row, pieceLocation.col-1),
+            Square.at(pieceLocation.row-1, pieceLocation.col-1), Square.at(pieceLocation.row-1, pieceLocation.col+1),
+            Square.at(pieceLocation.row+1, pieceLocation.col-1), Square.at(pieceLocation.row+1, pieceLocation.col+1)]
+            
         
     }
 }

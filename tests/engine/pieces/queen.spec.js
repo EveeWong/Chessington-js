@@ -33,7 +33,7 @@ describe('Queen', () => {
     });
 
     it('can move diagonally any number of spaces', () => {
-        const queen = new Queen(Player);
+        const queen = new Queen(Player.WHITE);
         board.setPiece(Square.at(0, 0), queen);
         rook.moveTo(board, Square.at(7, 7));
 

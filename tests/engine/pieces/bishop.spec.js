@@ -9,7 +9,7 @@ describe('Bishop', () => {
         beforeEach(() => board = new Board()); 
 
         it('can only move diagonally', () => {
-            const bishop = new Bishop(Player);
+            const bishop = new Bishop(Player.WHITE);
             board.setPiece(Square.at(0, 0), bishop);
             rook.moveTo(board, Square.at(7, 7));
 

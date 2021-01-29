@@ -9,7 +9,7 @@ describe('Rook', () => {
         beforeEach(() => board = new Board()); 
 
         it('can only move vertically', () => {
-            const rook = new Rook(Player);
+            const rook = new Rook(Player.WHITE);
             board.setPiece(Square.at(1, 0), rook);
             rook.moveTo(board, Square.at(7, 0));
 
